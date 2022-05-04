@@ -1,19 +1,45 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import Home from '../views/Home.vue'
 
 const routes = [
   {
     path: '/',
-    name: 'Home',
-    component: Home
+    redirect: '/recommend'
   },
   {
-    path: '/about',
-    name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
+    path: '/recommend',
+    component: () => import('../views/recommend/Recommend.vue')
+  },
+  {
+    path: '/songlist',
+    component: () => import('../views/songList/SongList.vue')
+  },
+  {
+    path: '/songlistdetail',
+    component: () => import('../views/songListDetail/SongListDetail.vue')
+  },
+  {
+    path: '/rankinglist',
+    component: () => import('../views/rankingList/RankingList.vue')
+  },
+  {
+    path: '/artist',
+    component: () => import('../views/artist/Artist.vue')
+  },
+  {
+    path: '/mv',
+    component: () => import('../views/mvList/MVList.vue')
+  },
+  {
+    path: '/mvdetail',
+    component: () => import('../views/mvDetail/MVDetail.vue')
+  },
+  {
+    path: '/newmusic',
+    component: () => import('../views/newMusic/NewMusic.vue')
+  },
+  {
+    path: '/searchresult',
+    component: () => import('../views/searchResult/SearchResult.vue')
   }
 ]
 
