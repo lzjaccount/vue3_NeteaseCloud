@@ -1,3 +1,5 @@
+注意：此项目需要配合https://github.com/Binaryify/NeteaseCloudMusicApi提供接口使用。
+
 # musicapp
 
 ## Project setup
